@@ -12,7 +12,7 @@ WORKDIR /var/www/html
 
 RUN apt install -y unzip
 ADD target/stackcraft.war /tmp/stackcraft.war
-RUN unzip /tmp/stackcraft.war -d /var/www/html/ && rm /tmp/stackcraft.war
+RUN unzip -o /tmp/stackcraft.war -d /var/www/html/ && rm /tmp/stackcraft.war
 
 EXPOSE 80
 
