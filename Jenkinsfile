@@ -1,3 +1,4 @@
+
 pipeline {
     agent any
 
@@ -5,6 +6,12 @@ pipeline {
         stage('GitHub Trigger Test') {
             steps {
                 echo 'Jenkins pipeline triggered successfully!'
+            }
+        }
+
+        stage('Build WAR') {
+            steps {
+                sh 'mvn clean package'
             }
         }
     }
