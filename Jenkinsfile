@@ -5,13 +5,14 @@ pipeline {
     stages {
         stage('GitHub Trigger Test') {
             steps {
-                echo 'Jenkins pipeline triggered successfully!'
+                echo 'Jenkins pipeline triggered successfully!!'
             }
         }
 
         stage('Build WAR') {
             steps {
                 sh 'mvn clean package'
+                echo 'Jenkins pipeline Build successful!!'
             }
         }
     }
