@@ -5,14 +5,19 @@ pipeline {
     stages {
         stage('GitHub Trigger Test') {
             steps {
-                echo 'Jenkins pipeline triggered successfully!!'
+                echo 'Jenkins pipeline triggered successfully!'
             }
         }
 
         stage('Build WAR') {
             steps {
                 sh 'mvn clean package'
-                echo 'Jenkins pipeline Build successful!!'
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh 'docker build -t stackcraft:latest .'
             }
         }
     }
