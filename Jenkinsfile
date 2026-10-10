@@ -6,7 +6,7 @@ pipeline {
         AWS_REGION = 'us-east-1'
         AWS_ACCOUNT_ID = '546854094105'
         ECR_REPOSITORY = 'stackcraft'
-        ECR_REGISTRY = "546854094105.dkr.ecr.us-east-1.amazonaws.com/stackcraft"
+        ECR_REGISTRY = "546854094105.dkr.ecr.us-east-1.amazonaws.com"
         IMAGE_TAG = 'latest'
     }
 
